@@ -1,7 +1,7 @@
-import SpongeBob from "../js/class/spongebob";
+import { Character, orderByProps } from "../js/class/spongebob";
 
-test('Object test SpongeBob', () => {
-  const friend = new SpongeBob();
+test('Object test Character', () => {
+  const SpongeBob = new Character('Губка Боб');
 
   const correct = [
     { prop: 'name', value: 'Губка Боб' },
@@ -10,5 +10,5 @@ test('Object test SpongeBob', () => {
     { prop: 'defence', value: 40 },
     { prop: 'health', value: 10 }
   ]
-  expect(friend.orderByProps(friend, ["name", "level"])).toEqual(correct);
+  expect(orderByProps(SpongeBob, ["name", "level"])).toEqual(correct);
 });

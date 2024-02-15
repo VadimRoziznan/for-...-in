@@ -1,5 +1,6 @@
-import SpongeBob from "./class/spongebob";
+import { Character, orderByProps} from "./class/spongebob";
 
-const bestFriend = new SpongeBob()
+const SpongeBob = new Character('Губка Боб');
+const orderByPropsSpongeBob = orderByProps(SpongeBob, ["name", "level"])
 
-console.log(bestFriend)
+console.log(orderByPropsSpongeBob)
